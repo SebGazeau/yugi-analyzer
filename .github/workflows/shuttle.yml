@@ -16,7 +16,7 @@ jobs:
           toolchain: stable
           override: true
       - name: Install Shuttle CLI
-        run: cargo install shuttle-launcher --locked
+        run: cargo install cargo-shuttle
       - name: Run tests
         run: cargo test --all
       - name: Lint
