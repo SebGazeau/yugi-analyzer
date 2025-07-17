@@ -94,7 +94,7 @@ async fn fetch_cards() -> impl Responder {
     // Sauvegarder le JSON dans un fichier
     match File::create("assets/cards.json") {
         Ok(mut file) => {
-            if let Err(_) = file.write_all(response.to_string().as_bytes()) {
+            if file.write_all(response.to_string().as_bytes()).is_err() {
                 return HttpResponse::InternalServerError().body("Erreur d’écriture fichier");
             }
         }
