@@ -1,3 +1,6 @@
 /target
 .shuttle*
 Secrets*.toml
+
+reset_context.txt
+update_reset.txt
