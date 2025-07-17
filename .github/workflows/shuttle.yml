@@ -1,27 +1,21 @@
-name: Deploy to Shuttle
+name: Shuttle Deploy
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-      - name: Install Shuttle CLI
-        run: cargo install cargo-shuttle
       - name: Run tests
         run: cargo test --all
       - name: Lint
         run: cargo clippy --all -- -D warnings
-      - name: Deploy to Shuttle
-        env:
-          SHUTTLE_API_KEY: ${{ secrets.SHUTTLE_API_KEY }}
-        run: shuttle deploy
+      - uses: shuttle-hq/deploy-action@v2
+        with:
+          shuttle-api-key: ${{ secrets.SHUTTLE_API_KEY }}
+          project-id: proj_01JXPV20C0CE286SYQB7YRRS4B
