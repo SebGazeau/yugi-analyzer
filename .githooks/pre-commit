@@ -1,0 +1,16 @@
+#!/bin/bash
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Lint Rust code
+cargo clippy --all -- -D warnings
+if [ $? -ne 0 ]; then
+  echo "✗ Lint failed! Commit aborted."
+  exit 1
+fi
+
+# Run tests
+cargo test --all
+if [ $? -ne 0 ]; then
+  echo "✗ Tests failed! Commit aborted."
+  exit 1
+fi 

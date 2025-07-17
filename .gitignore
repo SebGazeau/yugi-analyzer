@@ -4,3 +4,5 @@ Secrets*.toml
 
 reset_context.txt
 update_reset.txt
+# Ne pas ignorer les hooks versionnés
+!.githooks/
