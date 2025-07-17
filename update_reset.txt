@@ -1,0 +1,10 @@
+Mets à jour le fichier reset_context.txt pour qu’il reflète fidèlement l’état actuel du projet yugi-analyzer.
+
+- Analyse la structure du projet, les fichiers, les dossiers, les dépendances, les routes, les fonctionnalités, l’organisation du code, et les objectifs.
+- Prends en compte toutes les évolutions récentes (refactoring, ajouts de modules, changements de structure, nouvelles fonctionnalités, suppression ou renommage de fichiers, etc.).
+- Mets à jour ou complète chaque section du fichier reset_context.txt : technos, structure, routes, organisation, objectifs, vision, etc.
+- Supprime ou corrige toute information obsolète ou inexacte.
+- Si de nouvelles bonnes pratiques ou choix techniques ont été adoptés, ajoute-les.
+- Le but est que ce fichier serve toujours de référence à jour pour réinitialiser le contexte du projet lors de futures conversations ou collaborations.
+
+Génère le nouveau contenu complet et prêt à remplacer l’ancien reset_context.txt.

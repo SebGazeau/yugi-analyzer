@@ -1,0 +1,27 @@
+
+<div class="search-card-section">
+	<div class="search-container">
+		<div class="search-input-wrapper">
+			<div class="search-icon">🔍</div>
+			<input 
+				type="text" 
+				id="search-box" 
+				class="search-input" 
+				placeholder="Rechercher une carte... (min. 4 caractères)"
+				autocomplete="off"
+			>
+			<!-- <div class="search-counter" id="searchCounter">0 résultat</div> -->
+		</div>
+		
+		<!-- Liste des résultats de recherche -->
+		<div class="search-results" id="searchResults" style="display: none;">
+			<div class="search-results-header">
+				<span>Résultats de recherche</span>
+				<button class="close-search" onclick="closeSearch()">✕</button>
+			</div>
+			<div class="search-results-list" id="search-results-list">
+				<!-- Les résultats apparaîtront ici -->
+			</div>
+		</div>
+	</div>
+</div>

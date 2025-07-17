@@ -1,0 +1,6 @@
+[build]
+assets = ["static/*","static", "assets/*", "assets", "templates/*", "templates"]
+
+
+[deploy]
+assets = ["static/*","static", "assets/*", "assets", "templates/*", "templates"]
