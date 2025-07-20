@@ -37,9 +37,7 @@ Contexte actuel du projet :
   - .githooks/pre-commit : lint (clippy) et tests automatiques avant chaque commit
 
 - Routes principales :
-    - .route("/", web::get().to(index)),
-    - #[get("/fetch_cards")]
-    - #[get("/search")]
+    - .route("/", actix_web::web::get().to(index)),
 
 - Vision : Rendre le service public, pro, maintenable, évolutif, et agréable à utiliser pour la communauté Yu-Gi-Oh! francophone et au-delà.
 
