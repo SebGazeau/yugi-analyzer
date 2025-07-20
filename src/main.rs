@@ -25,7 +25,7 @@ fn create_template() -> Result<Tera, Error> {
     let base_template =match Tera::new("templates/**/*"){
         Ok(t) => t,
         Err(e) => {
-            eprintln!("Erreur lors de l'initialisation de Tera: {}", e);
+            eprintln!("Erreur lors de l'initialisation de Tera: {e}");
             panic!();
         }
     };
