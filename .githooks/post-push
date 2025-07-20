@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Compile le script Rust pour générer le prompt contextuel
+echo "==> Compilation du script tools/update_reset.rs..."
+rustc tools/update_reset.rs -o tools/update_reset
+
+# Génère le prompt contextuel après chaque push local
+echo "==> Génération du prompt update_reset.txt après push..."
+./tools/update_reset 
